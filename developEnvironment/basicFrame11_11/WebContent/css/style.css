@@ -1,0 +1,42 @@
+#container {
+	width:1200px;
+	margin:auto;
+}
+
+#loginSection {
+	margin: 0px auto 100px;
+	background-color: #e7f4f3;
+}
+
+#loginSectionInside {
+	background-color: #fafafa;
+	box-shadow: 1px 1px 2px #b6c2c2;
+	margin: auto;
+	border-radius: 15px;
+}
+
+#loginLogo {
+	display: block;
+	margin: 0px auto;
+	width: 600px;
+}
+
+#loginSection.loginBox {
+	width: 500px;
+	height: 500px;
+	padding: 50px;
+}
+
+#loginSectionInside.loginBox {
+	width: 500px;
+	height: 500px;
+}
+
+form ul {
+	list-style-type: none;
+}
+
+#footer {
+	background-color: #78bdbd;
+	height: 200px;
+}
