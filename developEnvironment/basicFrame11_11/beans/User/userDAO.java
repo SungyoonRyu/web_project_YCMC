@@ -13,10 +13,10 @@ public class userDAO {
 	
 	public userDAO(){
 		try{
-			String dbURL ="jdbc:mysql://localhost:3306/webdb?useSSL=false";
+			String dbURL ="jdbc:mariadb://localhost:3307/webdb?useSSL=false";
 			String dbID ="root"; //db아이디 
-			String dbPassword ="root";//db비밀번호
-			Class.forName("com.mysql.jdbc.Driver");
+			String dbPassword ="root1234";//db비밀번호
+			Class.forName("org.mariadb.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL,dbID,dbPassword);
 		}catch(Exception e){
 			e.printStackTrace();
