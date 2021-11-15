@@ -9,7 +9,10 @@
 <body>
 	<div id="header">
 		<div>
+		<div> <% if(session.getAttribute("ID") != null) { out.print(session.getAttribute("ID") + " welcome"); } %>
+		</div>
 			<a href="doLogin.jsp">로그인 영역</a>
+			<a href="loginaction.jsp">로그아웃</a>
 		</div>
 		<div id="logoimage"><a href="main.jsp"><img src="images/logo.png"></a></div>
 		<div id="navi">

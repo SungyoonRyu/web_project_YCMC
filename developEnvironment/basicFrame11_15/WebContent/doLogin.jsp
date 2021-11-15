@@ -12,7 +12,7 @@
 		<a href="main.jsp" id="noheaderlogolink" class="loginlogolink"><img src="images/ovallogo.png" id="logoimage"></a>
 		<div id="loginSection" class="loginBox">
 			<div id="loginSectionInside" class="loginBox">
-				<form method="post" action="loginaction.jsp">
+				<form method="post" action="login">
 					<ul>
 						<li><label>ID<input type="text" name="userID" placeholder="아이디를 입력하세요."></label></li>
 						<li><label>PASSWORD<input type="password" name="userPassword" placeholder="비밀번호를 입력하세요."></label></li>
@@ -30,7 +30,7 @@
 	</div>
 	<script type="text/javascript">
 		function goSignIn() {
-			location.replace("signIn.jsp");
+			location.replace("signUp.jsp");
 		}
 	</script>
 </body>
