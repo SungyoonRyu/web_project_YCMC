@@ -38,13 +38,14 @@ public class loginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String inputID = request.getParameter("userID");
 		String inputPW = request.getParameter("userPassword");
-		
+		String nickname = null;
 		loginBean login = new loginBean(inputID, inputPW);
 		
 		int loginNumber = login.checkingLogin();
-		if(loginNumber == 1) {
+		if(loginNumber == 1) { 
 			HttpSession session = request.getSession(true);
-			session.setAttribute("ID", inputID);
+			nickname = login.returningNickname(inputID,inputPW);
+			session.setAttribute("nickname", nickname);
 			response.sendRedirect("main.jsp");
 			return;
 		}

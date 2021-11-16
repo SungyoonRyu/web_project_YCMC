@@ -14,4 +14,9 @@ public class loginBean {
 		int loginStatus = userDAO.login(userID ,userPW);
 		return loginStatus;
 	}
+	public String returningNickname(String userID,String userPW){
+		UserDAO userDAO = new UserDAO();
+		String nickname = userDAO.returnNickname(userID,userPW);
+		return nickname;
+	}
 }
