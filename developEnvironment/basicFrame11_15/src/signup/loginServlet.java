@@ -1,4 +1,4 @@
-package signup;
+package login;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class signupServlet
+ * Servlet implementation class loginServlet
  */
-@WebServlet("/signupServlet")
-public class signupServlet extends HttpServlet {
+@WebServlet("/loginServlet")
+public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public signupServlet() {
+    public loginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,7 +28,7 @@ public class signupServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		doPost(request, response);
 	}
 
 	/**
@@ -36,20 +36,24 @@ public class signupServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 		String inputID = request.getParameter("userID");
 		String inputPW = request.getParameter("userPassword");
-		String inputNickname = request.getParameter("userNickname");
-		String inputEmail = request.getParameter("userEmail");
-		String inputGender = request.getParameter("userGender");
-		signupBean signup = new signupBean(inputID, inputPW, inputNickname, inputEmail, inputGender);
-		boolean signupStatus = signup.makeAccount();
-		if(signupStatus == true) {
-			response.sendRedirect("doLogin.jsp");
+		String nickname = null;
+		loginBean login = new loginBean(inputID, inputPW);
+		
+		int loginNumber = login.checkingLogin();
+		if(loginNumber == 1) { 
+			HttpSession session = request.getSession(true);
+			nickname = login.returningNickname(inputID,inputPW);
+			session.setAttribute("nickname", nickname);
+			response.sendRedirect("main.jsp");
+			return;
 		}
 		else {
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("doLogin.jsp");
 		}
+		
+		
 	}
 
 }
