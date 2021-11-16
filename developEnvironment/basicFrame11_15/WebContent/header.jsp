@@ -9,7 +9,7 @@
 <body>
 	<div id="header">
 		<div>
-		<div> <% if(session.getAttribute("ID") != null) { out.print(session.getAttribute("ID") + " welcome"); } %>
+		<div> <% if(session.getAttribute("nickname") != null) { out.print(session.getAttribute("nickname") + " welcome"); } %>
 		</div>
 			<a href="doLogin.jsp">로그인 영역</a>
 			<a href="loginaction.jsp">로그아웃</a>
