@@ -15,7 +15,7 @@ public class UserDAO {
 		try{
 			String dbURL ="jdbc:mariadb://localhost:3307/webdb?useSSL=false";
 			String dbID ="root"; //db아이디 
-			String dbPassword ="1234";//db비밀번호
+			String dbPassword ="root1234";//db비밀번호
 			Class.forName("org.mariadb.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL,dbID,dbPassword);
 		}catch(Exception e){
@@ -103,13 +103,84 @@ public class UserDAO {
 			if(pstmt.executeUpdate() == 1){
 				return true;
 			}
-
 		}catch(Exception e){
 			e.printStackTrace();
+		}finally{
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
-		return false; // db 오류
+		return false; // 로그인 중복시 false 
 	}
-	
-	
+	public String searchPW(String userID){
+		String SQL = "select userPassword from user where userID=?";
+		String pwd = null;
+		try{
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1,userID);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				pwd = rs.getString(1);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return pwd;
+	}
+	public String searchID(String userNickname, String userEmail){
+		String SQL = "select userID from user where userNickname=? and Where userEmail=?";
+		String id = null;
+		try{
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1,userNickname);
+			pstmt.setString(2,userEmail);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				id = rs.getString(1);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return id;
+	}
 }
 
