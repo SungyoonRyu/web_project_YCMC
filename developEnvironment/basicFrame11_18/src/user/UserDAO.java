@@ -150,13 +150,14 @@ public class UserDAO {
 		}
 		return pwd;
 	}
-	public String searchID(String userNickname, String userEmail){
-		String SQL = "select userID from user where userNickname=? and Where userEmail=?";
+	public String searchID(String userNickname, String userEmail,String userID){
+		String SQL = "select userID from user where userNickname=? and userEmail=? and userID=?";
 		String id = null;
 		try{
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1,userNickname);
 			pstmt.setString(2,userEmail);
+			pstmt.setString(3,userID);
 			rs = pstmt.executeQuery();
 			if(rs.next()){
 				id = rs.getString(1);
