@@ -55,7 +55,7 @@ public class BoardDAO {
 	}
 	public boolean Boardinsert(BoardDTO boardDTO){
 		Date nowday = new Date();
-		SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String SQL = "INSERT INTO board VALUES (?,?,?,?,?,?,?,?)";
 		try{
 			pstmt = conn.prepareStatement(SQL);

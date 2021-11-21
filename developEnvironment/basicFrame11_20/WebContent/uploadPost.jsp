@@ -29,8 +29,16 @@
 						<td><input type="date" name="rentalToDate"></td>
 					</tr>
 					<tr>
-						<td><label for="postContent">사진</label></td>
-						<td><input type="file" name="postFile"></td>
+						<td><label for="postContent">사진1</label></td>
+						<td><input type="file" name="postFile1"></td>
+					</tr>
+					<tr>
+						<td><label for="postContent">사진2</label></td>
+						<td><input type="file" name="postFile2"></td>
+					</tr>
+					<tr>
+						<td><label for="postContent">사진3</label></td>
+						<td><input type="file" name="postFile3"></td>
 					</tr>
 				</table>
 				

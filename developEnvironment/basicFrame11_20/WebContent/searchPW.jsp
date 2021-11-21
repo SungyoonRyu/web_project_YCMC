@@ -16,9 +16,9 @@
 			<div id="loginSectionInside" class="searchPWBox">
 				<form method="post" action="Password_search">
 					<ul>
-						<li><label>아이디<input type="text"></label></li>
-						<li><label>이름<input type="text"></label></li>
-						<li><label>이메일<input type="text"></label></li>
+						<li><label>아이디<input type="text" name="userID"></label></li>
+						<li><label>닉네임<input type="text" name="userNickname"></label></li>
+						<li><label>이메일<input type="text" name=userEmail></label></li>
 						<fieldset class="sexSelectField">
 								<legend>성별</legend>
 								<ul>

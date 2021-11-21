@@ -119,12 +119,15 @@ public class UserDAO {
 		}
 		return false; // 로그인 중복시 false 
 	}
-	public String searchPW(String userID){
-		String SQL = "select userPassword from user where userID=?";
+	public String searchPW(String userID, String userNickname, String userEmail, String userGender){
+		String SQL = "select userPassword from user where userID=? and userNickname =? and userGender =? and userEmail =?";
 		String pwd = null;
 		try{
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1,userID);
+			pstmt.setString(2,userNickname);
+			pstmt.setString(3,userGender);
+			pstmt.setString(4,userEmail);
 			rs = pstmt.executeQuery();
 			if(rs.next()){
 				pwd = rs.getString(1);

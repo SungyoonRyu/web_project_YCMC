@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+<%@ page import="image.*" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -37,10 +39,14 @@
 				title=rs.getString("title");
 				boardContent=rs.getString("boardContent");
 			}
+			
+			ImageDAO images = new ImageDAO();
+			ArrayList<String> filenames = images.fileNum(boardID);
 		%>
 		<main>
 			<div>${sessionScope.nickname}</div>
 			<div><%= title %></div>
+			<div><img src="images/imageboard/<%= filenames.get(0).toString() %>.jpg"></div>
 			<hr>
 			<div>내용</div>
 			<div><%= boardContent %></div>

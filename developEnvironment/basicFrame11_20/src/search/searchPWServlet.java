@@ -39,20 +39,21 @@ public class searchPWServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String inputID = request.getParameter("userID");
-		String inputPW = request.getParameter("userPassword");
-		String nickname = null;
-		loginBean login = new loginBean(inputID, inputPW);
+		String inputNickname = request.getParameter("userNickname");
+		String inputEmail = request.getParameter("userEmail");
+		String inputGender = request.getParameter("userGender");
+		searchInfo search = new searchInfo(inputID, inputNickname, inputEmail, inputGender);
+		String resultIDString = search.searchingPW();
 		
-		int loginNumber = login.checkingLogin();
-		if(loginNumber == 1) { 
-			HttpSession session = request.getSession(true);
-			nickname = login.returningNickname(inputID,inputPW);
-			session.setAttribute("nickname", nickname);
-			response.sendRedirect("main.jsp");
+		if(resultIDString != null) { 
+			RequestDispatcher dispatcher =  request.getRequestDispatcher("searchResult.jsp");
+			request.setAttribute("resultType", "Password");
+			request.setAttribute("resultString", resultIDString);
+			dispatcher.forward(request, response);
 		}
 		else {
 			RequestDispatcher dispatcher =  request.getRequestDispatcher("searchResult.jsp");
-			request.setAttribute("resultSearPW", loginNumber);
+			request.setAttribute("resultType", "none");
 			dispatcher.forward(request, response);
 		}
 	}

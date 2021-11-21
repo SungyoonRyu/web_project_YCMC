@@ -18,6 +18,13 @@
 					<ul>
 						<li><label>닉네임<input type="text" name="userNickname"></label></li>
 						<li><label>이메일<input type="text" name="userEmail"></label></li>
+						<fieldset class="sexSelectField">
+								<legend>성별</legend>
+								<ul>
+									<li><label>남<input type="radio" name="userGender" value="male"></label></li>
+									<li><label>여<input type="radio" name="userGender" value="woman"></label></li>
+								</ul>
+						</fieldset>
 					</ul>
 					<hr>
 					<input type="submit" value="아이디 찾기">

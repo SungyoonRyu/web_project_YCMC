@@ -40,7 +40,8 @@ public class searchIDServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String inputNickname = request.getParameter("userNickname");
 		String inputEmail = request.getParameter("userEmail");
-		searchInfo search = new searchInfo(null, inputNickname, inputEmail);
+		String inputGender = request.getParameter("userGender");
+		searchInfo search = new searchInfo(null, inputNickname, inputEmail, inputGender);
 		String resultIDString = search.searchingID();
 		
 		if(resultIDString != null) { 

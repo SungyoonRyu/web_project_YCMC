@@ -21,6 +21,7 @@
 					<% } else if(request.getAttribute("resultType") == "ID") { %>
 						<%= request.getAttribute("resultString") %>
 					<% } else if(request.getAttribute("resultType") == "Password") { %>
+						<%= request.getAttribute("resultString") %>
 					<% } else { %>
 						ERROR : 관리자에게 말씀해 주세요!
 					<% } %>
