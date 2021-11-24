@@ -29,7 +29,8 @@
 						<li><label>PASSWORD<input type="password" name="userPassword" placeholder="비밀번호를 입력하세요."></label></li>
 					</ul>
 					<p id="noIDorPW"><% if(request.getAttribute("resultLogin") != null) { out.print("아이디 혹은 비밀번호가 올바르지 않습니다."); } %></p><br/><br/>
-					<p style="text-align:center;"><a href="selectSearchInfo.jsp">아이디, 비밀번호가 기억나지 않나요?</a></p>
+					<p style="text-align:center;"><a style="text-decoration:none;
+	color:#EB5E0B;font-weight:bold;" href="selectSearchInfo.jsp">아이디, 비밀번호가 기억나지 않나요?</a></p>
 					<br/><br/><br/>
 					<hr>
 					<input type="button" class="loginBox" onclick="goSignIn()" value="회원가입">

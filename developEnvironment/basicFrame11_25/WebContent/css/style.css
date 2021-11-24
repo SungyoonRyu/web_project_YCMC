@@ -23,13 +23,22 @@ form ul {
 
 /*header section*/
 #header{
+	position:relative;
 	display: block;
     width: 1200px;
     height: 250px;
     margin: 20px auto 0;
 }
 #headerLoginMenu span{
-	margin:0px;
+	margin: 0px;
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    border: 2px solid rgb(70, 183, 185);
+    border-radius:3px;
+    box-shadow:1px 1px #7f7f7f;
+    color:#009DAE;
+    font-weight:bold;
 }
 #headerLoginMenu .loginButton{
 	display: inline-block;
@@ -44,9 +53,28 @@ form ul {
     font-family: 'Noto Sans KR',sans-serif;
     position: relative;
     top: 0em;
-    left: 72em;
+    left: 73em;
+}
+#headerLoginMenu .dologinButton{
+	display: inline-block;
+    border: 1px solid rgb(70, 183, 185);
+    border-radius: 10px;
+    width: 75px;
+    height: 20px;
+    padding: 0px;
+    background-color: #fafafa;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Noto Sans KR',sans-serif;
+    position: relative;
+    top: 0em;
+    left: 86em;
 }
 #headerLoginMenu .loginButton a{
+	text-decoration:none;
+	color:black;
+}
+#headerLoginMenu .dologinButton a{
 	text-decoration:none;
 	color:black;
 }
@@ -55,7 +83,6 @@ form ul {
 	width:600px;
 	height:0px;
 	margin:auto;
-	/*position 버튼 이동*/
 }
 
 #headerMenu ul li{
@@ -244,8 +271,11 @@ form ul {
     width: 1200px;
     background-color: rgb(231, 244, 243);
     height: 1200px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
-#MainPostDiv p{
+
+#MainPostDiv > p{
 	font-size: 36px;
     margin: 0px;
     position: relative;
@@ -255,23 +285,38 @@ form ul {
 }
 #MainPostDivInside{
 	display: block;
-    width: 950px;
-    height: 500px;
+    width: 960px;
+    height: 1000px;
     margin: 30px auto;
     border-radius:10px;
     background-color: #fafafa;
+    box-shadow: 1px 1px 2px #b6c2c2;
 }
-.PostCard{
-	display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
+#BoardTable{
+	width: 960px;
+	height: 1000px;
 }
-.PostCard .CardTop{
-	width: calc(25% - 44px);
-    margin-right: 44px;
-    margin-bottom: 56px;
+#BoardTable td{
+	width:320px;
+	height:333px;
+}
+.displayPost {
+	width:200px;
+	height:300px;
+	margin:0px auto;
+	text-align:center;
+	overflow: hidden;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.displayPost img{
+	display:block;
+	border-radius:20px;
+	width:150px; 
+	height:200px;
+	margin:5px auto;
+}
+.displayPost p{
+	
 }
 
 #ReadingGlassLogo {
@@ -400,7 +445,7 @@ form ul {
     padding: 0px;
     border-radius: 15px;
     background-color: #fafafa;
-    border: 1px solid rgb(74, 190, 202);
+    border: 2px solid rgb(74, 190, 202);
     color: rgb(74, 190, 202);
     font-size: 16px;                 /*글자 크기 16px 추가*/
 }
@@ -416,7 +461,7 @@ form ul {
     padding: 0px;
     background-color: #fafafa;
     border-radius: 15px;
-    border: 1px solid rgb(74, 190, 202);
+    border: 2px solid rgb(74, 190, 202);
     color: rgb(74, 190, 202);
     font-size: 16px;             /*글자 크기 16px 추가*/
 }
@@ -617,6 +662,11 @@ form ul {
 }
 
 /* signUp */
+#loginSectionInside span {
+	margin: 0px;
+	font-size: 12px;
+	color:#7f7f7f;
+}
 #loginSection.signin {
 	width: 1020px;
 	height: 680px;
@@ -646,11 +696,47 @@ form ul {
 	width: 600x;
 	margin: 150px auto 0px;
 }
-
+/*welcome*/
+#loginSection.welcome{
+	width: 520px;
+    height: 280px;
+    padding: 30px 10px;
+    margin: 70px auto 150px;
+    border-radius: 15px;
+}
+#loginSectionInside.welcome {
+	width: 450px;
+    height: 250px;
+    padding: 10px;
+}
+#loginSectionInside.welcome p{
+	font-size:25px;
+	font-weight:bold;
+	text-align:center;
+}
+#noheaderlogolink.welcome
+{
+	display: block;
+    width: 600px;
+    margin: 150px auto 0px;
+    text-align: center;
+}
+#loginSectionInside.welcome input[type=button]{
+	display: block;
+    height: 50px;
+    width: 150px;
+    margin: 25px 140px 10px 150px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;
+}
 
 
 /*footer*/
-#footer {                          
+#footer{                          
 	color:#7f7f7f;
 	background-color: #78bdbd;
 	height: 200px;

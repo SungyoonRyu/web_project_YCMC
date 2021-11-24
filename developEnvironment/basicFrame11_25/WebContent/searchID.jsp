@@ -21,8 +21,8 @@
 						<fieldset class="sexSelectField">
 								<legend>성별</legend>
 								<ul>
-									<li><label>남<input type="radio" name="userGender" value="male"></label></li>
-									<li><label>여<input type="radio" name="userGender" value="woman"></label></li>
+									<li><label><input type="radio" name="userGender" value="male">남성</label></li>
+									<li><label><input type="radio" name="userGender" value="woman">여성</label></li>
 								</ul>
 						</fieldset>
 					</ul>

@@ -9,12 +9,12 @@
 <body>
 	<div id="header">
 		<div id="headerLoginMenu">   <% if(session.getAttribute("nickname") != null) { %>  
-				<span><%= session.getAttribute("nickname") %></span>
+				<span><%= session.getAttribute("nickname") %>님 반갑습니다</span>
 				<div class="loginButton"><a href="uploadPost.jsp">게시글 작성</a></div>
 				<div class="loginButton"><a href="certifyPW.jsp">내정보</a></div>
 				<div class="loginButton"><a href="loginaction.jsp">로그아웃</a></div>
 				<% } else { %>
-				<div class="loginButton"><a href="doLogin.jsp">로그인</a></div>
+				<div class="dologinButton"><a href="doLogin.jsp">로그인</a></div>
 				<% } %>
 		</div>
 		<div id="logoimage"><a href="main.jsp"><img src="images/logo.png"></a></div>

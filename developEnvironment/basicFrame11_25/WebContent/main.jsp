@@ -36,32 +36,32 @@
 		</div>
 		<div id="MainFindTagDiv">
 		<br><br><br>
-		<label for="MainTagSearch">#내가 찾는 옷 태그로 쉽게 찾자!</label>
+		<label for="MainTagSearch"># 내가 찾는 옷 검색으로 쉽게 찾자!</label>
 		<br><br>
 		<form method="post" action="">
-		<input type="text" name="MainTagSearch" placeholder="# 태그를 사용해서 검색해보세요!"
+		<input type="text" name="MainTagSearch" placeholder="# 찾는 옷을 검색해보세요!"
 		style="height:40px; width:400px; font-size:23px;">
 		</form>
 		</div>
 		<div id="MainPostDiv">
 		<p style="padding-top:40px;">#최근 올라온 공유글</p>
 		<div id="MainPostDivInside">
-			<div class="PostCard">
-				<table>
+			<div>
+				<table id="BoardTable">
 				<tr>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
 				</tr>
 				<tr>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
 				</tr>
 				<tr>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
-					<td><div><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
+					<td><div class="displayPost"><img src="images/logo.png"><p>제목부분</p><%if(iter.hasNext()) { aboutPost = iter.next(); %><a href="seePost.jsp?id=<%= aboutPost.getBoardID() %>"><%= aboutPost.getTitle()  %><% } %></a></div></td>
 				</tr>
 			</table>
 			</div>

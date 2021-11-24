@@ -46,7 +46,7 @@
 		<main>
 			<div>${sessionScope.nickname}</div>
 			<div><%= title %></div>
-			<div><img src="images/imageboard/<%= filenames.get(0).toString() %>.jpg"></div>
+			<div><% if(!filenames.isEmpty()) { %><img src="images/imageboard/<%= filenames.get(0).toString() %>.jpg"><% } %></div>
 			<hr>
 			<div>내용</div>
 			<div><%= boardContent %></div>

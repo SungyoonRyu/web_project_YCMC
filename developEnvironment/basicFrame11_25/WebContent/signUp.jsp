@@ -15,21 +15,25 @@
 				<form method="post" action="signup">
 				<div style="display:inline-block;padding-left: 12px;">
 					<ul>
-						<li><label style="width:450px;">아이디<input type="text" name="userID"></label></li>
-						<li><label>비밀번호<input type="password" name="userPassword"></label></li>
-						<li><label>비밀번호 확인<input type="password" ></label></li>
-						<li><label>닉네임<input type="text" name="userNickname"></label></li>
+						<li><label style="width:450px;">아이디<span>&nbsp&nbsp #아이디는 최대 10글자입니다</span></label>
+						<input style="font-size:16px;" type="text" name="userID" placeholder="아이디를 입력하세요"></li>
+						<li><label>비밀번호<span>&nbsp&nbsp #비밀번호는 최대 12글자입니다</span>
+						<input style="font-size:16px;" type="password" name="userPassword" placeholder="비밀번호를 입력하세요"></label></li>
+						<li><label>비밀번호 확인
+						<input style="font-size:16px;" type="password" name="" placeholder="다시 한 번 입력하세요"></label></li>
+						<li><label>닉네임<span>&nbsp&nbsp #닉네임은 최대 8글자입니다</span>
+						<input style="font-size:16px;" type="text" name="userNickname" placeholder="닉네임을 입력하세요"></label></li>
 					</ul>
 				</div>
 				<div style="display:inline-block;vertical-align: top;">
 					<ul>
-						<li><label style="width:450px;">Email<input type="text" name="userEmail"></label></li>
+						<li><label style="width:450px;">Email<input style="font-size:16px;" type="text" name="userEmail" placeholder="이메일을 입력하세요"></label></li>
 						<li>
 							<fieldset class="sexSelectField">
 								<legend>성별</legend>
 								<ul>
-									<li><label>남<input type="radio" name="userGender" value="male"></label></li>
-									<li><label>여<input type="radio" name="userGender" value="female"></label></li>
+									<li><label><input type="radio" name="userGender" value="male">남성</label></li>
+									<li><label><input type="radio" name="userGender" value="female">여성</label></li>
 								</ul>
 							</fieldset>
 						</li>
