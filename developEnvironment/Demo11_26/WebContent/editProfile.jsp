@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="user.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,19 +9,34 @@
 <title>니옷내옷-나의정보</title>
 </head>
 <body>
+	<%
+		UserDAO DAO = new UserDAO();
+		UserDTO DTO = DAO.userInstance((String)session.getAttribute("ID"));
+	%>
 	<div id="container">
-		<div>
-			<a href="main.jsp"><img src="images/logo.png" id="loginLogo"></a>
-		</div>
-		<div id="loginSection" class="loginBox">
-			<div id="loginSectionInside" class="loginBox">
-				<form>
+		<a href="main.jsp" id="noheaderlogolink" class="signin"><img src="images/ovallogo.png" id="logoimage"></a>
+		<div id="loginSection" class="signin">
+			<div id="loginSectionInside" class="signin">
+				<form method="post" action="signup">
 					<ul>
-						<li><label>ID</label> <input type="text"></li>
-						<li><label>PASSWORD</label> <input type="password"></li>
+						<li><label>아이디<span>&nbsp&nbsp #아이디는 최대 10글자입니다</span></label>
+						<input style="font-size:16px;" type="text" name="userID" value="<%= session.getAttribute("ID") %>" maxlength="10" readonly></li>
+						<li><label>닉네임<span>&nbsp&nbsp #닉네임은 최대 8글자입니다</span>
+						<input style="font-size:16px;" type="text" name="userNickname" value="<%= session.getAttribute("nickname") %>" maxlength="8" required></label></li>
+						<li><label>Email<input style="font-size:16px;" type="text" name="userEmail" value="<%= DTO.getUserEmail() %>" readonly></label></li>
+						<li>
+							<fieldset class="sexSelectField">
+								<legend>성별</legend>
+								<ul>
+									<li><label><input type="radio" name="userGender" value="male" <% if(DTO.getUserGender().equals("male")) { %>checked<% } %> onclick="return(false);">남성</label></li>
+									<li><label><input type="radio" name="userGender" value="female" <% if(DTO.getUserGender().equals("female")) { %>checked<% } %> onclick="return(false);">여성</label></li>
+								</ul>
+							</fieldset>
+						</li>
 					</ul>
-					<input type="button" value="회원가입">
-					<input type="submit" value="Login">
+				<br/><br/><br/><br/><br/><br/>
+					<hr>
+					<div id="loginSectionInsideSignUpButton"><input type="submit" value="변경하기"></div>
 				</form>
 			</div>
 		</div>

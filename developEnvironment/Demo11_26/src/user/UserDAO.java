@@ -92,7 +92,7 @@ public class UserDAO {
 		}return str;
 	}
 	public boolean signup(UserDTO user){
-		String SQL = "INSERT INTO USER VALUES (?,?,?,?,?)";
+		String SQL = "INSERT INTO USER VALUES (?,?,?,?,?,?)";
 		try{
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, user.getUserID());
@@ -100,6 +100,7 @@ public class UserDAO {
 			pstmt.setString(3, user.getUserEmail());
 			pstmt.setString(4, user.getUserGender());
 			pstmt.setString(5, user.getUserNickname());
+			pstmt.setString(6, "default.jpg");
 			if(pstmt.executeUpdate() == 1){
 				return true;
 			}
@@ -201,6 +202,7 @@ public class UserDAO {
 				DTO.setUserEmail(rs.getString(3));
 				DTO.setUserGender(rs.getString(4));
 				DTO.setUserNickname(rs.getString(5));
+				DTO.setProfileImage(rs.getString(6));
 			}
 		}catch(Exception e){
 			e.printStackTrace();

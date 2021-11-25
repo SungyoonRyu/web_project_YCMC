@@ -6,9 +6,11 @@ public class BoardDTO {
 	private String area;
 	private String boardDate;
 	private String boardContent;
-	private String rentalDate;
+	private String rentalDate1;
+	private String rentalDate2;
 	private int rentalCount;
 	private String userNickname;
+	private String Category;
 	
 	public String getBoardID() {
 		return boardID;
@@ -40,11 +42,17 @@ public class BoardDTO {
 	public void setBoardContent(String boarContent) {
 		this.boardContent = boarContent;
 	}
-	public String getRentalDate() {
-		return rentalDate;
+	public String getRentalDate1() {
+		return rentalDate1;
 	}
-	public void setRentalDate(String rentalDate) {
-		this.rentalDate = rentalDate;
+	public void setRentalDate1(String rentalDate) {
+		this.rentalDate1 = rentalDate;
+	}
+	public String getRentalDate2() {
+		return rentalDate2;
+	}
+	public void setRentalDate2(String rentalDate) {
+		this.rentalDate2 = rentalDate;
 	}
 	public int getRentalCount() {
 		return rentalCount;
@@ -58,6 +66,10 @@ public class BoardDTO {
 	public void setUserNickname(String userNickname) {
 		this.userNickname = userNickname;
 	}
-	
-	
+	public String getCategory() {
+		return Category;
+	}
+	public void setCategory(String Category) {
+		this.Category = Category;
+	}
 }

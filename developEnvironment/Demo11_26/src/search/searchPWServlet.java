@@ -38,6 +38,7 @@ public class searchPWServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
 		String inputID = request.getParameter("userID");
 		String inputNickname = request.getParameter("userNickname");
 		String inputEmail = request.getParameter("userEmail");

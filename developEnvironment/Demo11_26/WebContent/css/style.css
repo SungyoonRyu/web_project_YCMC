@@ -23,54 +23,66 @@ form ul {
 
 /*header section*/
 #header{
-	position:relative;
-	display: block;
+	position: relative;
+    display: block;
     width: 1200px;
-    height: 250px;
+    height: 263px;
     margin: 20px auto 0;
-    border-bottom: 3px solid #009DAE;
+    border-bottom: 4px solid #009DAE;
 }
-#headerLoginMenu span{
-	margin: 0px;
-    position: absolute;
+.LoginProfileDiv{
+	display:inline-block;
+	height:35px;
+	position: absolute;
     right: 10px;
     top: 35px;
+}
+.LoginProfileDiv img{
+	width:32px;
+	height:32px;
+	display:inline-block;
+	vertical-align:bottom;
+	border-radius:50%;
+}
+.LoginProfileDiv span{
+	margin: 0px;
     border: 2px solid rgb(70, 183, 185);
     border-radius:3px;
     box-shadow:1px 1px #7f7f7f;
     background-color:#009DAE;
     font-weight:bold;
+    vertical-align:super;
     color:white;
 }
 #headerLoginMenu .loginButton{
 	display: inline-block;
-    border: 1px solid rgb(70, 183, 185);
+    border: 2px solid rgb(70, 183, 185);
     border-radius: 8px;
-    width: 80px;
-    height: 20px;
+    width: 95px;
+    height: 25px;
     padding: 0px;
     background-color: #fafafa;
-    font-size: 14px;
+    font-size: 17px;
     text-align: center;
     font-family: 'Noto Sans KR',sans-serif;
     position: relative;
     top: 0em;
-    left: 67em;
+    left: 52em;
 }
 #headerLoginMenu .dologinButton{
 	display: inline-block;
-    border: 1px solid rgb(70, 183, 185);
-    border-radius: 10px;
-    width: 80px;
-    height: 20px;
+    border: 2px solid rgb(70, 183, 185);
+    border-radius: 8px;
+    width: 95px;
+    height: 25px;
     padding: 0px;
     background-color: #fafafa;
-    font-size: 14px;
+    font-size: 17px;
     text-align: center;
     font-family: 'Noto Sans KR',sans-serif;
     position: relative;
     top: 0em;
-    left: 79em;
+    left: 64em;
 }
 #headerLoginMenu .loginButton a{
 	text-decoration:none;
@@ -82,7 +94,7 @@ form ul {
 }
 #headerMenu{
 	border:none;
-	width:600px;
+	width:700px;
 	height:0px;
 	margin:auto;
 }
@@ -101,13 +113,14 @@ form ul {
 	text-decoration:none;
 	border-radius:10px;
 	vertical-align:middle;
-	border:1px solid rgb(70, 183, 185);
+	border:2px solid rgb(70, 183, 185);
 	color:black;
 	display:block;
-	width:80px;
-	height:35px;
-	font-size:15px;
+	width:95px;
+	height:40px;
+	font-size:20px;
 	font-family: 'Noto Sans KR', sans-serif;
+	line-height:40px;
 }
 
 #headerLoginButton{
@@ -133,14 +146,23 @@ form ul {
 /*certifyPW*/
 #loginSection.certifyPasswordBox{
 	width: 500px;
-    height: 250px;
+    height: 300px;
     padding: 30px 10px;
     border-radius: 15px;
 }
 #loginSectionInside.certifyPasswordBox {
 	width: 450px;
-    height: 230px;
+    height: 280px;
     padding: 10px;
+}
+#loginSectionInside.certifyPasswordBox p{
+	height:20px;
+	font-size:17px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	color:#EB5E0B;
+	text-align:center;
+	margin:0px;
 }
 #noheaderlogolink.certifyPasswordBox  /*로고*/
 {
@@ -172,7 +194,7 @@ form ul {
 	display: block;
     height: 50px;
     width: 170px;
-    margin: 25px 140px;
+    margin: 15px 140px;
     padding: 0px;
     background-color: #fafafa;
     border-radius: 20px;
@@ -324,37 +346,94 @@ form ul {
 }
 /*myProfile*/
 #loginSection.myProfile{
-	margin: 0px auto 100px;
+	margin: 0px auto 10px;
     background-color: #e7f4f3;
-    border-top:solid 2px #78bdbd;
+    height:1100px;
 }
-#loginSection.myProfile p{
+#loginSection.myProfile p{  /*#마이페이지 p태그*/
 	font-family: 'Noto Sans KR', sans-serif;
     font-size: 37px;
     font-weight: bold;
-    margin: 10px 15px 0px;
+    margin: 0px 15px 5px;
     padding: 0px;
 }
-
-#loginSectionInside.myProfile{
+#loginSectionInside.myProfile{ 
 	background-color: #fafafa;
     box-shadow: 2px 2px 2px #b6c2c2;
     margin: 0px 30px;
     border-radius: 15px;
+}
+#loginSectionInside.myProfile p{   /* 1.회원정보, 4번 5번*/
+	font-family: 'Noto Sans KR', sans-serif;
+	margin:0px;
+	font-size:30px;
+	font-weight:bold;
+}
+#myProfileMenu{
+	display: inline-block;
+	width:500px;
+    padding-left: 40px;
+    margin: 20px 0px;
+}
+#myProfileMenu ul li{
+	list-style:none;
+}
+#myProfileMenu img{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+}
+
+#myProfileMenu2{           /*비밀번호 2*/
+	display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 0px;
+}
+#myProfileMenu2 .changeButton{
+	width: 350px;
+    height: 50px;
+    border: none;
+    background-color:rgb(70, 183, 185);
+    margin: 15px 80px 15px 60px;
+    font-size:20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:bold;
+    text-align:center;
+    line-height:50px;
+    border-radius:10px;
+}
+#myProfileMenu2 .changeButton a{
+	text-decoration:none;
+	color:white;
+	padding:auto;
+}
+#myProfileMenu3{
+	display: inline-block;
+	width:500px;
+    padding-left: 40px;
+    margin: 20px 0px;
+}
+#myProfileMenu3 .InsideDivBoard{
+	display:block;
+	width:1050px;
+	height:200px;
+	background-color:#e7f4f3;
+	border:4px solid black;
+	border-radius:10px;
 }
 
 /*uploadPost section*/
 #UploadBackDiv{
 	display: table;
     width: 950px;
-    height: 900px;
-    margin: 0px auto;
+    height: 1000px;
+    margin: 25px auto;
     background-color: rgb(231, 244, 243);
-    border-radius:10px;
+    border-radius: 10px;
 }
 #UploadBackInsideDiv{
 	width: 900px;
-	height: 860px;
+	height: 960px;
     margin: 15px auto 15px;
     background-color: #fafafa;
     border: none;
@@ -362,7 +441,7 @@ form ul {
     box-shadow: 1px 1px 2px #b6c2c2;
 }
 #UploadBackInsideDiv label{
-	font-size:17px;
+	font-size:16px;
 	font-family: 'Noto Sans KR', sans-serif;
 	margin:20px;
 	font-weight:bold;
@@ -377,6 +456,12 @@ form ul {
 	width:700px;
 	height:20px;
 }
+#UploadBackInsideDiv select{
+	border: 1px solid rgb(70, 183, 185);
+	width:200px;
+	height:30px;
+	
+}
 #UploadBackInsideDiv textarea{
 	border: 1px solid rgb(70, 183, 185);
 	width:700px;
@@ -385,7 +470,6 @@ form ul {
 	resize:none;
 	font-family: 'Noto Sans KR', sans-serif;
 }
-
 #UploadBackInsideDiv file{
 	color:rgb(70, 183, 185);
 	display:none;
@@ -475,13 +559,13 @@ form ul {
 	display: inline-block;
     height: 50px;
     width: 200px;
-    margin: 10px 24px;
+    margin: 15px 24px;
     padding: 0px;
     background-color: #fafafa;
     border-radius: 15px;
     border: 2px solid rgb(74, 190, 202);
     color: rgb(74, 190, 202);
-    font-size: 16px;             /*글자 크기 16px 추가*/
+    font-size: 16px;            /*글자 크기 16px 추가*/
 }
 
 #loginSectionInside input[type=button]:hover {
@@ -548,7 +632,7 @@ form ul {
 }
 #loginSectionInside.searchIDBox fieldset.sexSelectField {
 	width: 200px;
-    margin: 50px 0px 50px;
+    margin: 50px 90px 50px;
     border: 2px solid rgb(74, 190, 202);
 }
 #loginSectionInside.searchIDBox input[type=submit]{
@@ -629,7 +713,7 @@ form ul {
 	display: block;
     height: 50px;
     width: 150px;
-    margin: 150px 140px 10px 150px;
+    margin: 80px 140px 10px 150px;
     padding: 0px;
     background-color: #fafafa;
     border-radius: 20px;
@@ -637,11 +721,17 @@ form ul {
     color: rgb(74, 190, 202);
     font-size: 16px;
 }
-#loginSectionInside.searchResult.ErrorMessage{
-	display:block;
-	text-align:center;
-	font-size:20px;
-	font-family: 'Noto Sans KR', sans-serif;
+#SRhr{
+	border: 1px solid black;
+    margin: 0px auto;
+    width:75%;
+}
+#SR{
+	margin: 10px 0px 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /*seePost*/
@@ -755,27 +845,20 @@ form ul {
 
 /*footer*/
 #footer{                          
-	color:#7f7f7f;
-	background-color: #78bdbd;
-	height: 200px;
-	border-radius:10px;                /*footer 둥근테두리 추가*/
-	padding:20px;
+	color: #7f7f7f;
+    background-color: #78bdbd;
+    height: 170px;
+    border-radius: 10px;
+    padding: 20px;
+    border:3px solid #009DAE;
 }
 #footer img{
-	float: left;
-    position: relative;
-    right: -1000px;
-    top: -180px;
-    width: 150px;
+    width: 160px;
     height: auto;
 }
-#footer hr{
-	border:1px solid #71DFE7;
-	margin:0px;
-}
-#footer span{
+#footer p{
 	font-size:14px;
 	font-weight:bold;
 	margin:0px;
-	padding:7px;
+	padding:0px;
 }

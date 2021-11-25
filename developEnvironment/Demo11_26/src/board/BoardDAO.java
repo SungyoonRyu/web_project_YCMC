@@ -56,7 +56,7 @@ public class BoardDAO {
 	public boolean Boardinsert(BoardDTO boardDTO){
 		Date nowday = new Date();
 		SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String SQL = "INSERT INTO board VALUES (?,?,?,?,?,?,?,?)";
+		String SQL = "INSERT INTO board VALUES (?,?,?,?,?,?,?,?,?,?)";
 		try{
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, boardDTO.getBoardID());
@@ -64,9 +64,11 @@ public class BoardDAO {
 			pstmt.setString(3, boardDTO.getArea());
 			pstmt.setString(4, date.format(nowday));
 			pstmt.setString(5, boardDTO.getBoardContent());
-			pstmt.setString(6, boardDTO.getRentalDate());
-			pstmt.setInt(7, boardDTO.getRentalCount());
-			pstmt.setString(8, boardDTO.getUserNickname());
+			pstmt.setString(6, boardDTO.getRentalDate1());
+			pstmt.setString(7, boardDTO.getRentalDate2());
+			pstmt.setInt(8, boardDTO.getRentalCount());
+			pstmt.setString(9, boardDTO.getUserNickname());
+			pstmt.setString(10, boardDTO.getCategory());
 			if(pstmt.executeUpdate() == 1){
 				return true;
 			}
@@ -100,9 +102,11 @@ public class BoardDAO {
 			board.setArea(rs.getString(3));
 			board.setBoardDate(rs.getString(4));
 			board.setBoardContent(rs.getString(5));
-			board.setRentalDate(rs.getString(6));
-			board.setRentalCount(rs.getInt(7));
-			board.setUserNickname(rs.getString(8));
+			board.setRentalDate1(rs.getString(6));
+			board.setRentalDate2(rs.getString(7));
+			board.setRentalCount(rs.getInt(8));
+			board.setUserNickname(rs.getString(9));
+			board.setCategory(rs.getString(10));
 			boardArr.add(board);
 			num++;
 		}
@@ -134,7 +138,7 @@ public class BoardDAO {
 			pstmt.setString(1,board.getTitle());
 			pstmt.setString(2,board.getArea());
 			pstmt.setString(3,board.getBoardContent());
-			pstmt.setString(4,board.getRentalDate());
+			pstmt.setString(4,board.getRentalDate1());
 			pstmt.setInt(5,board.getRentalCount());
 			pstmt.setString(1,board.getBoardID());
 			if(pstmt.executeUpdate() == 1){

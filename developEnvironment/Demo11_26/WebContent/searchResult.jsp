@@ -18,17 +18,17 @@
 				<br><br>
 				<div class="ErrorMessage">
 					<% if(request.getAttribute("resultType") == "none") { %>
-						해당 정보가 없습니다.
+						<p id="SR">해당 정보가 없습니다.</p>
 					<% } else if(request.getAttribute("resultType") == "ID") { %>
 						<%= request.getAttribute("resultString") %>
 					<% } else if(request.getAttribute("resultType") == "Password") { %>
 						<%= request.getAttribute("resultString") %>
 					<% } else { %>
-						<span style="font-weight:bold">ERROR : 관리자에게 말씀해 주세요!</span>
+						<p>ERROR : 관리자에게 말씀해 주세요!</p>
 					<% } %>
 				</div>
 				<form>
-					<hr>
+					<hr id="SRhr">
 					<input type="button" onclick="goSignIn()" value="로그인">
 				</form>
 			</div>

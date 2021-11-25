@@ -6,6 +6,8 @@ public class UserDTO {
 	private String userEmail; // 유저 이메일
 	private String userGender; // 유저 성별
 	private String userNickname; // 유저 닉네임
+	private String profileImage;
+	
 	public String getUserID() {
 		return userID;
 	}
@@ -35,5 +37,11 @@ public class UserDTO {
 	}
 	public void setUserNickname(String userNickname) {
 		this.userNickname = userNickname;
+	}
+	public String getProfileImage() {
+		return profileImage;
+	}
+	public void setProfileImage(String profileImage) {
+		this.profileImage = profileImage;
 	}
 }

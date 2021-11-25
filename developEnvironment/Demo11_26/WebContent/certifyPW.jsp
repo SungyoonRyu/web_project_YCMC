@@ -18,8 +18,8 @@
 					<ul>
 						<li><label>비밀번호 확인</label> <input type="password" name ="certifyPassword"></li>
 					</ul>
-					<p id=""><% if(request.getAttribute("resultCheck") != null) { out.print("아이디 혹은 비밀번호가 올바르지 않습니다."); } %></p><br/><br/>
-					<hr>
+					<p><% if(request.getAttribute("resultCheck") != null) { out.print("비밀번호가 올바르지 않습니다."); } %></p><br/><br/>
+					<hr style="margin:0px;">
 					<input type="submit" value="비밀번호 확인">
 				</form>
 			</div>

@@ -64,7 +64,7 @@
 					</tr>
 				</table>
 				</table>
-				<br>
+				<br><br>
 				<input type="hidden" id="nowTime" name="today" value="">
 				<input type="submit" value="게시글 작성">
 				</form>

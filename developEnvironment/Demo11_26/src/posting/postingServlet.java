@@ -41,6 +41,7 @@ public class postingServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=UTF-8");
 		HttpSession session = request.getSession(true);
 		String saveDir = "C:\\Users\\류성윤\\workspace\\project_YCMC_1\\WebContent\\images\\imageboard";
 		int maxSize = 8*1024*1024; // 3MB
@@ -65,7 +66,7 @@ public class postingServlet extends HttpServlet {
 				}
 			}
 		}
-		boolean isPostUp = postingBean.postUpinBoard(boardID, multi.getParameter("postTitle"), "tmp", multi.getParameter("postContent"), (String)multi.getParameter("rentalFromDate"), (String)session.getAttribute("nickname"), filenames);
+		boolean isPostUp = postingBean.postUpinBoard(boardID, multi.getParameter("postTitle"), "tmp", multi.getParameter("postContent"), (String)multi.getParameter("rentalFromDate"), (String)multi.getParameter("rentalToDate"), (String)session.getAttribute("nickname"), (String)multi.getParameter("postCategory"), filenames);
 		
 		if(isPostUp) {
 			response.sendRedirect("seePost.jsp?id=" + boardID);

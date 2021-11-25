@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class postingBean {
 	public postingBean() {}
 	
-	public static boolean postUpinBoard(String boardID, String title, String area, String content, String rentalDate, String userNickname, ArrayList<String> files) {
+	public static boolean postUpinBoard(String boardID, String title, String area, String content, String rentalDate1, String rentalDate2, String userNickname, String Category, ArrayList<String> files) {
 		BoardDTO DTO = new BoardDTO();
 		BoardDAO DAO = new BoardDAO();
 		ImageDAO Imagefile = new ImageDAO();
@@ -15,9 +15,11 @@ public class postingBean {
 		DTO.setTitle(title);
 		DTO.setArea(area);
 		DTO.setBoardContent(content);
-		DTO.setRentalDate(rentalDate);
+		DTO.setRentalDate1(rentalDate1);
+		DTO.setRentalDate2(rentalDate2);
 		DTO.setRentalCount(0);
 		DTO.setUserNickname(userNickname);
+		DTO.setCategory(Category);
 		boolean postupStatus = DAO.Boardinsert(DTO) && Imagefile.insertfile(boardID, files);
 		return postupStatus;
 	}

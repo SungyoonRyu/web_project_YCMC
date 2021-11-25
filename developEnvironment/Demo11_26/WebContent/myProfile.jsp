@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="board.*" %>
-<%@ page import="user.*" %>
+	<%@ page import="board.*" %>
+	<%@ page import="user.*" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,32 +24,40 @@
 		%>
 			<div id ="loginSection" class="myProfile">
 				<p>#마이페이지</p>
-				<div id ="loginSectionInside" class="checkingPasswordForProfile">
-					<h2>1.회원 정보</h2>
+				<div id ="loginSectionInside" class="myProfile">
+					<div id="myProfileMenu">
+					<p>1. 회원 정보</p>
 						<ul>
-							<li>ID:<%= userDTO.getUserID() %></li>
-							<li>Nickname:<%=userDTO.getUserNickname() %></li>
-							<li>Email:<%= userDTO.getUserEmail()%></li>
-							<li>SEX:<%=userDTO.getUserGender() %></li>
+							<li><img src="images/profileimage/default.jpg"></li>
+							<li><p style="font-size:25px">ID: "<%= userDTO.getUserID() %>"</p></li>
+							<li><p style="font-size:25px">Nickname: "<%=userDTO.getUserNickname() %>"</p></li>
+							<li><p style="font-size:25px">Email: "<%= userDTO.getUserEmail()%>"</p></li>
+							<li><p style="font-size:25px">Gender: "<%=userDTO.getUserGender() %>"</p></li>
 						</ul>
-					<p><h2>2. 비밀번호 변경</h2><div><a href="changePW.jsp">비밀번호 변경</a></div></p> 
-					<p><h2>3. 회원정보 변경</h2><div><a href="">회원정보 변경</a></div></p>
-					<p>
-							<h2>4.나의 게시글</h2><br>
+					</div>	
+					<div id="myProfileMenu2">
+						<p>2. 비밀번호 변경<div class="changeButton"><a href="changePW.jsp">비밀번호 변경페이지로 바로가기</a></div></p> 
+						<p>3. 회원정보 변경<div class="changeButton"><a href="editProfile.jsp">회원정보 변경페이지로 바로가기</a></div>
+						<p>4. 프로필 사진 변경<div class="changeButton"><a href="editProfileImage.jsp">프로필 사진 변경페이지로 바로가기</a></div></p>
+					</div>
+					<div id="myProfileMenu3">
+						<p>5. 나의 관희게시글</p><br>
+						<div class="InsideDivBoard">
 							<%						
-							while(iter.hasNext()){
+								while(iter.hasNext()){
 								DTO = iter.next();
 								if(session.getAttribute("nickname").equals(DTO.getUserNickname())){
 								out.println("<a href ="+"seePost.jsp?id="+DTO.getBoardID()+">"+DTO.getTitle()+"</a><br>");
 								}
 							}
 							%>
-
-							<a href="">작성</a>
-							<a href="">편집</a>
-					</p>
-					<p><h2>5.나의 게시물 공유 요청</h2></p>
-				
+						</div>
+						<br><br>
+						<p>6. 나의 게시물 공유 요청</p>
+						<div class="InsideDivBoard"></div>
+					</div>
+					
+					
 				</div>		
 			</div>
 		</main>

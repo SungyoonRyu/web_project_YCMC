@@ -7,15 +7,12 @@
 </head>
 <body>
 	<div id="footer">
-		<hr>
-		<span>Web Programming Project [Your clothes My Clothes]</span><br><br>
-		<span>Copyright 2021. DGU_CSE_YCMC. all rights reserved.By Team1 WebSuvSuv</span><br><br>
-		<span>100-715 서울특별시 중구 필동로 1길 30 신공학과 CSE WebTeam WebSuvSuv</span><br><br>
-		<span>CSE WebTeam WebSuvSuv, 30, Pildong-ro 1-gil, Jung-gu, Seoul, 100-715, Korea 100-715</span><br><br>
-		<span>이용문의 : 010-9336-8494</span><br><br>
-		<hr>
-		<img src="images/logo.png">
-		
+		<img src="images/logo-cutout.png">
+		<br><br>
+		<p>Web Programming Project [Your clothes My Clothes]</p>
+		<p>Copyright 2021. DGU_CSE_YCMC. all rights reserved.By Team1 WebSuvSuv</p>
+		<p>100-715 서울특별시 중구 필동로 1길 30 신공학과 CSE WebTeam WebSuvSuv</p>
+		<p>CSE WebTeam WebSuvSuv, 30, Pildong-ro 1-gil, Jung-gu, Seoul, 100-715, Korea 100-715  이용문의 : 010-9336-8494</p>
 	</div>
 </body>
 </html>
