@@ -1,0 +1,1217 @@
+#container{
+	width:1200px;
+	margin:auto;
+}
+
+hr{
+	border-top:1px solid #bbb;          /*아이디 ,비번 찾기 밑  hr 크기 2px*/
+}
+
+input{
+	display: block;
+}
+
+label {
+	display: block;
+	margin: 10px 0px;
+	font-weight: bold;
+}
+
+form ul {
+	list-style-type: none;
+}
+
+/*header section*/
+#header{
+	position: relative;
+    display: block;
+    width: 1200px;
+    height: 263px;
+    margin: 20px auto 0;
+    border-bottom: 4px solid #009DAE;
+}
+.LoginProfileDiv{
+	display:inline-block;
+	height:35px;
+	position: absolute;
+    right: 10px;
+    top: 35px;
+}
+.LoginProfileDiv img{
+	width:32px;
+	height:32px;
+	display:inline-block;
+	vertical-align:bottom;
+	border-radius:50%;
+}
+.LoginProfileDiv span{
+	margin: 0px;
+    border: 2px solid rgb(70, 183, 185);
+    border-radius:3px;
+    box-shadow:1px 1px #7f7f7f;
+    background-color:#009DAE;
+    font-weight:bold;
+    vertical-align:super;
+    color:white;
+}
+#headerLoginMenu .loginButton{
+	display: inline-block;
+    border: 2px solid rgb(70, 183, 185);
+    border-radius: 8px;
+    width: 95px;
+    height: 25px;
+    padding: 0px;
+    background-color: #fafafa;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Noto Sans KR',sans-serif;
+    position: relative;
+    top: 0em;
+    left: 52em;
+}
+#headerLoginMenu .dologinButton{
+	display: inline-block;
+    border: 2px solid rgb(70, 183, 185);
+    border-radius: 8px;
+    width: 95px;
+    height: 25px;
+    padding: 0px;
+    background-color: #fafafa;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Noto Sans KR',sans-serif;
+    position: relative;
+    top: 0em;
+    left: 64em;
+}
+#headerLoginMenu .loginButton a{
+	text-decoration:none;
+	color:black;
+}
+#headerLoginMenu .dologinButton a{
+	text-decoration:none;
+	color:black;
+}
+#headerMenu{
+	border:none;
+	width:700px;
+	height:0px;
+	margin:auto;
+}
+
+#headerMenu ul li{
+	display:inline-block;
+	list-style:none;
+	color:black;
+	background-color:#fafafa;
+	line-height:30px;       /*글씨가 가운데로 오도록 한줄의 높이를 30px로 설정*/
+	vertical-align:middle;
+	text-align:center;
+}
+
+#headerMenu .menuLink{
+	text-decoration:none;
+	border-radius:10px;
+	vertical-align:middle;
+	border:2px solid rgb(70, 183, 185);
+	color:black;
+	display:block;
+	width:95px;
+	height:40px;
+	font-size:20px;
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height:40px;
+}
+
+#headerLoginButton{
+	display:inline-block;
+	float:right;
+	top:0px;	
+	right:5px;
+	position:relative;
+	padding:7px;
+	width:75px;
+	height:30px;
+}
+
+.LoginButton{
+	padding:5px;
+	border:1px solid rgb(70, 183, 185);
+	border-radius:10px;
+	text-align:center;
+	text-decoration:none;
+	font-size:10px;
+	color:black;
+}
+/*certifyPW*/
+#loginSection.certifyPasswordBox{
+	width: 500px;
+    height: 300px;
+    padding: 30px 10px;
+    border-radius: 15px;
+}
+#loginSectionInside.certifyPasswordBox {
+	width: 450px;
+    height: 280px;
+    padding: 10px;
+}
+#loginSectionInside.certifyPasswordBox p{
+	height:20px;
+	font-size:17px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	color:#EB5E0B;
+	text-align:center;
+	margin:0px;
+}
+#noheaderlogolink.certifyPasswordBox  /*로고*/
+{
+	display: block;
+    width: 600px;
+    margin: 50px auto 100px;
+    text-align: center;
+}
+#loginSectionInside.certifyPasswordBox label
+{
+	margin: 20px 15px;
+    font-size: 20px;
+}
+#loginSectionInside.certifyPasswordBox form ul{
+	margin:0px;
+	padding:0px;
+}
+#loginSectionInside.certifyPasswordBox input[type=password]
+{
+	height: 50px;
+    width: 400px;
+    margin: 20px auto;
+    background-color: #fafafa;
+    border: none;
+    border-bottom: 2px solid rgb(74, 190, 202);
+    font-size: 16px;
+}
+#loginSectionInside.certifyPasswordBox input[type=submit] {
+	display: block;
+    height: 50px;
+    width: 170px;
+    margin: 15px 140px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;                 /*글자 크기 16px 추가*/
+}
+/*changePW*/
+#loginSection.changePWBox {
+	border-radius: 10px;
+	width: 520px;
+	height: 520px;
+	padding: 30px;
+}
+
+#loginSectionInside.changePWBox{
+	width: 500px;
+	height: 500px;
+	padding: 10px;
+}
+#noheaderlogolink.changePWBox
+{
+	display: block;
+	width: 600px;
+	margin: 150px auto 0px;
+	text-align:center;
+}
+#loginSectionInside.changePWBox input[type=submit]{
+	display: block;
+    height: 50px;
+    width: 150px;
+    margin: 35px auto;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px
+}
+/*editProfile*/
+#loginSection.editmyProfile {
+	width: 560px;
+    height: 840px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#loginSectionInside.editmyProfileInside{
+	height: 805px;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 2px #b6c2c2;
+    margin: auto;
+    border-radius: 15px;
+    width: 500px;
+}
+#loginSectionInside.editmyProfileInside ul li{
+	padding:10px
+}
+#loginSectionInside.editmyProfileInside label{
+	margin:20px auto;
+}
+#loginSectionInside.editmyProfileInside fieldset.sexSelectField{
+	margin:0px 80px;
+}
+
+/*editProfileImage*/
+#loginSection.editProfileimage {
+    width: 500px;
+    height: 600px;
+    padding: 30px;
+    border-radius: 10px;
+}
+#loginSection.editProfileimage p{
+    font-size: 25px;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 0px;
+}
+#loginSectionInside.editProfileimage {
+    margin: 0px auto 0px;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 2px #b6c2c2;
+    height: 550px;
+}
+#loginSectionInside.editProfileimage img{
+    width: 280px;
+    display: block;
+    height: 280px;
+    margin: 10px auto;
+    border-radius: 50%;
+    padding: 25px;
+}
+#loginSectionInside.editProfileimage input[type=file]{
+    display: block;
+    margin: 25px auto 0px;
+    width: 380px;
+}
+#loginSectionInside.editProfileimage input[type=submit]{
+    display: block;
+    margin: 20px auto;
+    height: 50px;
+    width: 150px;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: #fafafa;
+    border: 2px solid rgb(70, 183, 185);
+    color: rgb(74, 190, 202);
+    font-size: 16px;
+}
+#uploadInfoMessage{
+	display: block;
+    margin: 5px auto 0px;
+    font-size: 14px;
+    text-align: center;
+    color: #EB5E0B;
+    font-weight: bold;
+}
+/*main*/
+#MainInfoDiv{
+	display: table;
+    width: 900px;
+    height: 300px;
+    padding-left: 300px;
+    margin: 0px;
+    background-color: rgb(231, 244, 243);
+}
+#MainInfoDiv p{
+	font-size:23px;
+	margin:auto;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#MainInfoDiv label{
+	display:table-cell;
+	list-style:none;
+	margin:0px;
+	font-size:23px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#MainInfoDiv ul li{
+	list-style:none;
+	color:black;
+	vertical-align:middle;
+	text-align:center;
+	font-family: 'Noto Sans KR', sans-serif;
+} 
+
+#MainFindTagDiv {
+    display: table;
+    width: 850px;
+    height: 300px;
+    padding-left: 350px;
+    background-color: #fafafa;
+    vertical-align: middle;
+}
+
+#MainFindTagDiv label{
+	list-style:none;
+	margin:0px;
+	font-size:30px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#MainFindTagDiv input[type=text]{
+	width:100px;
+	height:300px;
+	font-size:40px;
+	font-family: 'Noto Sans KR', sans-serif; /*적용이 안되서 인라인했음*/
+}
+
+#MainPostDiv {
+    display: block;
+    width: 1200px;
+    background-color: rgb(231, 244, 243);
+    height: 1200px;
+}
+
+#MainPostDiv > p{
+	font-size: 36px;
+    margin: 0px;
+    position: relative;
+    padding-left: 95px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:800;
+}
+#MainPostDivInside{
+	display: block;
+    width: 960px;
+    height: 1000px;
+    margin: 30px auto;
+    border-radius:10px;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 2px #b6c2c2;
+}
+#BoardTable{
+	width: 960px;
+	height: 1000px;
+}
+#BoardTable td{
+	width:320px;
+	height:333px;
+}
+.displayPost {
+	width:200px;
+	height:300px;
+	margin:0px auto;
+	text-align:center;
+	overflow: hidden;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.displayPost img{
+	display:block;
+	border-radius:20px;
+	width:150px; 
+	height:200px;
+	margin:5px auto;
+}
+.displayPost p{
+	
+}
+
+#ReadingGlassLogo {
+	display:block;
+	width:10px;
+	float:left;
+}
+/*myProfile*/
+#loginSection.myProfile{
+	margin: 0px auto 10px;
+    background-color: #e7f4f3;
+    height:1100px;
+}
+#loginSection.myProfile p{  /*#마이페이지 p태그*/
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 37px;
+    font-weight: bold;
+    margin: 0px 15px 5px;
+    padding: 0px;
+}
+#loginSectionInside.myProfile{ 
+	background-color: #fafafa;
+    box-shadow: 2px 2px 2px #b6c2c2;
+    margin: 0px 30px;
+    border-radius: 15px;
+}
+#loginSectionInside.myProfile p{   /* 1.회원정보, 4번 5번*/
+	font-family: 'Noto Sans KR', sans-serif;
+	margin:0px;
+	font-size:30px;
+	font-weight:bold;
+}
+#myProfileMenu{
+	display: inline-block;
+	width:500px;
+    padding-left: 40px;
+    margin: 20px 0px;
+}
+#myProfileMenu ul li{
+	list-style:none;
+}
+#myProfileMenu img{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+}
+
+#myProfileMenu2{           /*비밀번호 2*/
+	display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 0px 0px;
+}
+#myProfileMenu2 .changeButton{
+	width: 350px;
+    height: 50px;
+    border: none;
+    background-color:rgb(70, 183, 185);
+    margin: 15px 80px 15px 60px;
+    font-size:20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:bold;
+    text-align:center;
+    line-height:50px;
+    border-radius:10px;
+}
+#myProfileMenu2 .changeButton a{
+	text-decoration:none;
+	color:white;
+	padding:auto;
+}
+#myProfileMenu3{
+	display: inline-block;
+	width:500px;
+    padding-left: 40px;
+    margin: 20px 0px;
+}
+#myProfileMenu3 .InsideDivBoard{
+	display:block;
+	width:1050px;
+	height:200px;
+	background-color:#e7f4f3;
+	border:4px solid black;
+	border-radius:10px;
+}
+
+/*uploadPost section*/
+#UploadBackDiv{
+	display: table;
+    width: 950px;
+    height: 1000px;
+    margin: 25px auto;
+    background-color: rgb(231, 244, 243);
+    border-radius: 10px;
+}
+#UploadBackInsideDiv{
+	width: 900px;
+	height: 960px;
+    margin: 15px auto 15px;
+    background-color: #fafafa;
+    border: none;
+    border-radius:10px;
+    box-shadow: 1px 1px 2px #b6c2c2;
+}
+#UploadBackInsideDiv label{
+	font-size:16px;
+	font-family: 'Noto Sans KR', sans-serif;
+	margin:20px;
+	font-weight:bold;
+}
+#UploadBackInsideDiv input{
+	border: 1px solid rgb(70, 183, 185);
+	font-size:15px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#UploadBackInsideDiv input[type=text]{
+	border: 1px solid rgb(70, 183, 185);
+	width:700px;
+	height:20px;
+}
+#UploadBackInsideDiv select{
+	border: 1px solid rgb(70, 183, 185);
+	width:200px;
+	height:30px;
+	
+}
+#UploadBackInsideDiv textarea{
+	border: 1px solid rgb(70, 183, 185);
+	width:700px;
+	height:400px;
+	font-size:15px;
+	resize:none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#UploadBackInsideDiv file{
+	color:rgb(70, 183, 185);
+	display:none;
+	border: 1px solid rgb(70, 183, 185);
+	width:700px;
+	height:400px;
+	font-size:15px;
+	resize:none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#UploadBackInsideDiv input[type=submit]{
+	width:150px;
+	height:40px;
+	margin:auto;
+	border-radius:20px;
+	background-color:#fafafa;
+	border:2px solid rgb(70, 183, 185);
+	text-align:center;
+	color:rgb(70, 183, 185);
+}
+
+/*noHeader section*/
+#loginSection {
+	margin: 55px auto 100px;
+	background-color: #e7f4f3;
+}
+
+#loginSectionInside {
+	background-color: #fafafa;
+	box-shadow: 1px 1px 2px #b6c2c2;
+	margin: auto;
+	border-radius: 15px;
+}
+
+#logoimage {
+	display: block;
+    margin: 20px auto;
+    width: 450px;
+    text-align: center;
+}
+
+#loginSectionInside label {
+	margin: 20px auto;
+	font-size: 20px;
+}
+#loginSectionInside input[type=text] {
+	height: 50px;
+	width: 400px;
+	margin: 10px 0px;
+	background-color: #fafafa;
+	border: none;
+	border-bottom: 2px solid rgb(74, 190, 202);
+	font-size:14px;                 /*글자 크기 14px 추가*/
+}
+#loginSectionInside input[type=text]::placeholder {
+	color: rgb(74, 190, 202);
+}
+#loginSectionInside input[type=password] {
+	height: 50px;
+	width: 400px;
+	margin: 10px 0px;
+	background-color: #fafafa;
+	border: none;
+	border-bottom: 2px solid rgb(74, 190, 202);
+	font-size:16px;                 /*글자 크기 14px 추가*/
+}
+#loginSectionInside input[type=password]::placeholder {
+	color: rgb(74, 190, 202);
+}
+#loginSectionInside input[type=submit] {
+	display: inline-block;
+    height: 50px;
+    width: 200px;
+    margin: 10px 23px;
+    padding: 0px;
+    border-radius: 15px;
+    background-color: #fafafa;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;                 /*글자 크기 16px 추가*/
+}
+#loginSectionInside input[type=submit]:hover {
+	background-color: #f4f4f4;            /*마우스 올려뒀을 때 색상 연하게 조정*/
+}
+
+#loginSectionInside input[type=button] {
+	display: inline-block;
+    height: 50px;
+    width: 200px;
+    margin: 15px 24px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 15px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;            /*글자 크기 16px 추가*/
+}
+
+#loginSectionInside input[type=button]:hover {
+	background-color: #f4f4f4;           /*마우스 올려뒀을 때 색상 연하게 조정*/  
+}
+
+#loginSectionInside fieldset.sexSelectField {
+	width: 200px;
+    margin: 95px 0px 0px;
+    border:2px solid rgb(74, 190, 202);
+}
+
+#loginSectionInside fieldset.sexSelectField legend{
+	font-family:'Noto Sans KR', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+#loginSectionInside fieldset.sexSelectField input{
+	display: inline;
+}
+
+/* doLogin */
+#loginSection.loginBox {
+	border-radius: 10px;
+	width: 520px;
+	height: 520px;
+	padding: 30px;
+}
+
+#loginSectionInside.loginBox {
+	width: 500px;
+	height: 500px;
+	padding: 10px;
+}
+
+#noheaderlogolink.loginlogolink
+{
+	display: block;
+	width: 450px;
+	margin: 150px auto 0px;
+}
+
+/* searchID */
+#loginSection.searchIDBox {
+	width: 520px;
+    height: 600px;
+    padding: 30px;
+    margin: 65px auto;
+    border-radius: 15px;
+}
+
+#loginSectionInside.searchIDBox {
+	width: 500px;
+	height: 580px;
+	padding: 10px;
+}
+
+#noheaderlogolink.searchIDBox
+{
+	display: block;
+	width: 600px;
+	margin: 150px auto 0px;
+	text-align:center;
+}
+#loginSectionInside.searchIDBox fieldset.sexSelectField {
+	width: 200px;
+    margin: 50px 90px 50px;
+    border: 2px solid rgb(74, 190, 202);
+}
+#loginSectionInside.searchIDBox input[type=submit]{
+	display: block;
+    height: 50px;
+    width: 150px;
+    margin: 30px auto;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px
+}
+/* searchPW */
+#loginSection.searchPWBox {
+	width: 520px;
+    height: 700px;
+    padding: 30px 10px;
+    border-radius: 15px;
+}
+#loginSectionInside.searchPWBox {
+	width: 450px;
+    height: 680px;
+    padding: 15px;
+}
+#noheaderlogolink.searchPWBox
+{
+	display: block;
+    width: 600px;
+    margin: 150px auto 0px;
+    text-align: center;
+}
+#loginSectionInside.searchPWBox label
+{
+	margin: 20px -15px;
+    font-size: 20px;
+}
+#loginSectionInside.searchPWBox fieldset{
+	width: 200px;
+    margin: 50px 65px 50px;
+    border: 2px solid rgb(74, 190, 202);
+}
+#loginSectionInside.searchPWBox input[type=submit]{
+	display: block;
+    height: 50px;
+    width: 170px;
+    margin: 25px 140px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;
+}
+
+/*searchResult*/
+#loginSection.searchResult{
+	width: 520px;
+    height: 280px;
+    padding: 30px 10px;
+    margin: 150px auto;
+    border-radius: 15px;
+}
+#loginSectionInside.searchResult {
+	width: 450px;
+    height: 180px;
+    padding: 10px;
+}
+#noheaderlogolink.searchResult
+{
+	display: block;
+    width: 600px;
+    margin: 150px auto 0px;
+    text-align: center;
+}
+#loginSectionInside.searchResult input[type=button]{
+	display: block;
+    height: 50px;
+    width: 150px;
+    margin: 80px 140px 10px 150px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;
+}
+#SRhr{
+	border: 1px solid black;
+    margin: 0px auto;
+    width:75%;
+}
+#SR{
+	margin: 10px 0px 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*seePost*/
+#seePostBackDiv{
+	display: block;
+    width: 1200px;
+    height: 1850px;
+    background-color: #fafafa;
+    border: none;
+    margin: 0px auto;
+}
+#firstDiv{
+	width: 1200px;
+    height: 720px;
+}
+#seePostLabelDiv{
+	display: inline-block;
+    width: 600px;
+    height: 120px;
+    margin: 35px 0px 50px 270px;
+}
+#seePostLabelDiv img{
+	display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px;
+    vertical-align: top;
+}
+#ManuButton a{
+	text-decoration: none;
+    border: none;
+    background-color: rgb(74, 190, 202);
+    text-align: center;
+    display: inline-block;
+    width: 65px;
+    height: 27px;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    position: relative;
+    left: 600px;
+    top: 35px;
+    
+}
+.labelAlign{
+	display:inline-block;
+}
+.labelAlign ul li{
+	display:block;
+	list-style:none;
+	margin:0px;
+}
+.labelAlign p{
+	margin:3px;
+	font-size:18px;
+	width:450px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#slider{
+	margin: 0 auto;
+    width: 660px;
+    height: 350px;
+    max-width: 99%;
+}
+#slider input[type=radio]{
+	display:none;
+}
+#slider label{
+	cursor:pointer;
+	text-decoration:none;
+}
+#slide{
+	padding: 10px;
+  	border: 1px solid #ccc;
+  	background: #fff;
+  	position: relative;
+  	z-index: 1;
+}
+#imageOverflow{
+	width:100%;
+	overflow:hidden;
+}
+#slide1:checked ~ #slides .inner{
+  margin-left: 0;
+}
+#slide2:checked ~ #slides .inner{
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner{
+  margin-left: -200%;
+}
+#slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.0770, 0.000, 0.175, 1.000);
+  width: 500%;
+  line-height: 0;
+  height: 450px;
+} 
+#slides .inner img{
+	width:400px;
+	height:450px;
+	border-radius: 10px;
+}
+#slides .slide {
+  width: 20%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: black;
+  
+}
+.slide-content{
+	padding:10px;
+}
+#controls {
+  margin: -130px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+}
+#controls label:hover {
+  opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(1){
+	float: right;
+	margin: 0 -50px 0 0;
+	display: block;
+}
+#slide1:checked ~ #controls label:nth-child(3),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2){
+	float: left;
+	margin: 0 0 0 -50px;
+	display: block;
+}
+
+#bullets {
+  margin: 200px 0 0;
+  text-align: center;
+}
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+#bullets label:hover{
+	background-color: #717171;
+}
+#bullets label:visited{
+	background-color: #717171;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3){
+  background: #717171;
+}
+.seeposthr{
+	background-color:#009DAE;
+	height:2px;
+	width:90%;
+	text-align:center;
+}
+#secondDiv p{
+	margin: 10px 60px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#userComment{
+	display: block;
+    width: 1080px;
+    height: 150px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 15px;
+    border: 1px solid #009DAE;
+    margin: 25px auto;
+    background-color: #fafafa;
+}
+#secondDiv form{
+	display: block;
+    margin: 20px 60px;
+}
+#secondDiv textarea{
+	width:1080px;
+	height:150px;
+	font-size: 23px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius:15px;
+    resize:none;
+    border: 1px solid #009DAE;
+}
+#secondDiv input[type=submit]{
+	float:right;
+	color:white;
+	padding:3px;
+	font-size:18px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color:rgb(74, 190, 202);
+	border:none;
+	border-radius:10px;
+}
+
+#thirdDiv p{
+	margin: 10px 60px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.infoTable{
+	width: 60%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 30px auto;
+    border-radius:10px;
+}
+.infoTable th{
+	padding: 1px;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    background: rgb(224, 224, 224);
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 0 1px #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    border-radius:7px;
+}
+.infoTable td{
+	padding: 15px;
+    border: none;
+    border-bottom: 2px solid rgb(224, 224, 224);
+    text-align: left;
+    vertical-align: baseline;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius:7px;
+}
+#fourthDiv p{
+	margin: 10px 60px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#clothInformation {
+	display: block;
+    width: 1080px;
+    height: 150px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 15px;
+    border: 1px solid #009DAE;
+    margin: 25px auto;
+    background-color: #fafafa;
+}
+
+
+/*selectSearchInfo*/
+.buttonSearch {
+	width: 150px;
+    height: 35px;
+    color: rgb(74, 190, 202);
+    border: 3px solid rgb(74, 190, 202);
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    margin: 35px 45px;
+    font-size: 20px
+}
+
+#loginSection.selectSearch {
+	width: 500px;
+    height: 125px;
+    padding: 12px 14px 25px;
+    border-radius: 15px;
+}
+#loginSection.selectSearch p{
+	margin:0px;
+	text-align:center;
+	font-family:'Noto Sans KR', sans-serif;
+	font-weight:bold;
+}
+#loginSectionInside.selectSearch {
+	width: 500px;
+	height: 100px;
+}
+
+/* signUp */
+#loginSectionInside span {
+	margin: 0px;
+	font-size: 12px;
+	color:#7f7f7f;
+}
+#loginSection.signin {
+	width: 1020px;
+	height: 680px;
+	padding: 30px;
+	border-radius:10px;
+}
+#loginSectionInside.signin {
+	width: 1000px;
+	height: 660px;
+	padding: 10px;
+}
+#loginSectionInsideSignUpButton input[type=submit]{
+	display:block;
+	margin: 20px auto;
+	height: 50px;
+	width: 150px;
+	padding: 0px;
+	border-radius:20px;
+	background-color:#fafafa;
+	border:2px solid rgb(70, 183, 185);
+	color:rgb(74, 190, 202);             /*회원가입 버튼 글자 색상 조정*/
+	font-size:16px;
+}
+#noheaderlogolink.signin
+{
+	display: block;
+	width: 600x;
+	margin: 150px auto 0px;
+}
+/*welcome*/
+#loginSection.welcome{
+	width: 520px;
+    height: 280px;
+    padding: 30px 10px;
+    margin: 70px auto 150px;
+    border-radius: 15px;
+}
+#loginSectionInside.welcome {
+	width: 450px;
+    height: 250px;
+    padding: 10px;
+}
+#loginSectionInside.welcome p{
+	font-size:25px;
+	font-weight:bold;
+	text-align:center;
+}
+#noheaderlogolink.welcome
+{
+	display: block;
+    width: 600px;
+    margin: 150px auto 0px;
+    text-align: center;
+}
+#loginSectionInside.welcome input[type=button]{
+	display: block;
+    height: 50px;
+    width: 150px;
+    margin: 25px 140px 10px 150px;
+    padding: 0px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: 2px solid rgb(74, 190, 202);
+    color: rgb(74, 190, 202);
+    font-size: 16px;
+}
+
+
+/*footer*/
+#footer{                          
+	color: #7f7f7f;
+    background-color: #78bdbd;
+    height: 170px;
+    border-radius: 10px;
+    padding: 20px;
+    border:3px solid #009DAE;
+}
+#footer img{
+    width: 160px;
+    height: auto;
+}
+#footer p{
+	font-size:14px;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+}
