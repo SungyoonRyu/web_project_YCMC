@@ -67,7 +67,6 @@ public class postingServlet extends HttpServlet {
 			}
 		}
 		boolean isPostUp = postingBean.postUpinBoard(boardID, multi.getParameter("postTitle"), multi.getParameter("postContent"), (String)multi.getParameter("rentalFromDate"), (String)multi.getParameter("rentalToDate"), (String)session.getAttribute("nickname"), (String)multi.getParameter("postCategory"), filenames);
-		
 		if(isPostUp) {
 			response.sendRedirect("seePost.jsp?id=" + boardID);
 		}

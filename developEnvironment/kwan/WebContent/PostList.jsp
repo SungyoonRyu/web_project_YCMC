@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="board.*" %>
+<%@ page import="java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,7 +13,30 @@
 	<div id="container">
 		<header> <%@ include file="header.jsp"%> </header>
 		<main>
-		
+		<table border="1" width="450">
+		<%
+			String queryString = request.getQueryString();
+			String boardCategory = queryString.substring(queryString.lastIndexOf("=")+1);
+			BoardDAO boardDAO = new BoardDAO();
+			BoardDTO categoryPost = null;
+			ArrayList <BoardDTO> categoryList = boardDAO.boardCategoryList(boardCategory);
+			if(categoryList.isEmpty()){
+				out.println("<tr><th>관련 게시글이 아직 없습니다</th></tr>");
+			}else{
+				out.println("<tr>");
+				for(int i =0; i<categoryList.size();i++){
+					out.println("<td>");
+					out.println("<a href='seePost.jsp?id="+categoryList.get(i).getBoardID()+"'>");
+					out.println("<div class='displayPost'>"+"<img src='images/imageboard/"+categoryList.get(i).getBoardID()+"1.jpg'>");
+					out.println("<p>"+categoryList.get(i).getTitle()+"</p>");
+					out.println("</div></a>");
+					out.println("</td>");
+				}
+				out.println("</tr>");
+			}
+			
+		%>
+		</table>
 		</main>
 		<footer> <%@ include file="footer.jsp"%> </footer>
 	</div>

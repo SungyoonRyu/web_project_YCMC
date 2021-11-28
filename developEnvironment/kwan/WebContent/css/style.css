@@ -828,8 +828,8 @@ form ul {
 #seePostLabelDiv{
 	display: inline-block;
     width: 600px;
-    height: 70px;
-    margin: 50px 300px 30px;
+    height: 120px;
+    margin: 35px 0px 50px 270px;
 }
 #seePostLabelDiv img{
 	display: inline-block;
@@ -837,7 +837,25 @@ form ul {
     height: 50px;
     border-radius: 50%;
     margin: 0px;
-    vertical-align:bottom;
+    vertical-align: top;
+}
+#ManuButton a{
+	text-decoration: none;
+    border: none;
+    background-color: rgb(74, 190, 202);
+    text-align: center;
+    display: inline-block;
+    width: 65px;
+    height: 27px;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    position: relative;
+    left: 600px;
+    top: 35px;
+    
 }
 .labelAlign{
 	display:inline-block;
@@ -850,6 +868,7 @@ form ul {
 .labelAlign p{
 	margin:3px;
 	font-size:18px;
+	width:450px;
 	font-weight:bold;
 	font-family: 'Noto Sans KR', sans-serif;
 }
@@ -957,6 +976,9 @@ form ul {
 #bullets label:hover{
 	background-color: #717171;
 }
+#bullets label:visited{
+	background-color: #717171;
+}
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3){
@@ -968,15 +990,23 @@ form ul {
 	width:90%;
 	text-align:center;
 }
-#secondDiv{
-	width:1200px;
-	height:250px;
-}
-#sendMessage label{
+#secondDiv p{
 	margin: 10px 60px;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Noto Sans KR', sans-serif;
+}
+#userComment{
+	display: block;
+    width: 1080px;
+    height: 150px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 15px;
+    border: 1px solid #009DAE;
+    margin: 25px auto;
+    background-color: #fafafa;
 }
 #secondDiv form{
 	display: block;
@@ -1003,6 +1033,7 @@ form ul {
 	border:none;
 	border-radius:10px;
 }
+
 #thirdDiv p{
 	margin: 10px 60px;
     font-size: 30px;
@@ -1059,49 +1090,7 @@ form ul {
     margin: 25px auto;
     background-color: #fafafa;
 }
-#fifthDiv p{
-	margin: 10px 60px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-#userComment{
-	display: block;
-    width: 1080px;
-    height: 150px;
-    font-size: 23px;
-    font-weight: bold;
-    font-family: 'Noto Sans KR', sans-serif;
-    border-radius: 15px;
-    border: 1px solid #009DAE;
-    margin: 25px auto;
-    background-color: #fafafa;
-}
-#fifthDiv form{
-	display: block;
-    margin: 20px 60px;
-}
-#fifthDiv textarea{
-	width:1080px;
-	height:150px;
-	font-size: 23px;
-    font-weight: bold;
-    font-family: 'Noto Sans KR', sans-serif;
-    border-radius:15px;
-    resize:none;
-    border: 1px solid #009DAE;
-}
-#fifthDiv input[type=submit]{
-	float:right;
-	color:white;
-	padding:3px;
-	font-size:18px;
-	font-weight:bold;
-	font-family: 'Noto Sans KR', sans-serif;
-	background-color:rgb(74, 190, 202);
-	border:none;
-	border-radius:10px;
-}
+
 
 /*selectSearchInfo*/
 .buttonSearch {

@@ -102,7 +102,7 @@ public class BoardDAO {
     return boardArr;
     }
 	public ArrayList<BoardDTO> boardCategoryList(String boardCategory){
-        String SQL ="select * from board order by boardDate DESC where boardCategory =?"; 
+        String SQL ="select * from board where boardCategory =? order by boardDate DESC"; 
         int num = 0;
         ArrayList <BoardDTO> boardArr = new ArrayList<BoardDTO>();
     try{

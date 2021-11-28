@@ -9,7 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/style.css">
 <title>니옷내옷-당신의 옷을 공유하세요</title>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -40,13 +39,21 @@
 		<% } %>
 		<div id="MainFindTagDiv">
 		<br><br><br>
+		<form action="searchtitle" method="post">
 		<label for="MainTagSearch"># 내가 찾는 옷 검색으로 쉽게 찾자!</label>
 		<br><br>
-		<input id="boardTitle" onkeyup="seachrBoard();" type="text" name="MainTagSearch" placeholder="# 찾는 옷을 검색해보세요!"
-		style="height:40px; width:400px; font-size:23px;">
-		<button onclick="getSearchList()" onclick="searchBoard();" type="button" class="">검색</button>
+		<input id="boardTitle" type="text" name="MainTagSearch" placeholder="# 찾는 옷을 검색해보세요!"
+		style ="height:40px; width:400px; font-size:23px;"
+		/>
+		<input type="submit" value="검색" class="">
+		</form>
+		<div id="NoneSearchTag">
+			<%if(request.getAttribute("msg")!=null){ 
+				out.println((String)request.getAttribute("msg"));	
+			} 
+			%>
 		</div>
-		</table>
+		</div>
 		<div id="MainPostDiv">
 		<p style="padding-top:40px;">#최근 올라온 공유글</p>
 		<div id="MainPostDivInside">

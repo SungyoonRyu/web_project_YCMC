@@ -24,12 +24,12 @@
 		<div id="logoimage"><a href="main.jsp"><img src="images/logo.png"></a></div>
 		<div id="headerMenu">
 			<ul>
-				<li><a class="menuLink" href="#">상 의</a></li>
-				<li><a class="menuLink" href="#">하 의</a></li>
-				<li><a class="menuLink" href="#">아우터</a></li> 				
-				<li><a class="menuLink" href="#">신 발</a></li>
-				<li><a class="menuLink" href="#">액세사리</a></li>
-				<li><a class="menuLink" href="#">가 방</a></li>
+				<li><a class="menuLink" href="PostList.jsp?boardCategory=<%="top"%>">상 의</a></li>
+				<li><a class="menuLink" href="PostList.jsp?boardCategory=<%="bottoms"%>">하 의</a></li>
+				<li><a class="menuLink" href="PostList.jsp?boardCategory=<%="outer"%>">아우터</a></li> 				
+				<li><a class="menuLink" href="PostList.jsp?boardCategory=<%="shoes"%>">신 발</a></li>
+				<li><a class="menuLink" href="PostList.jsp?boardCategory=<%="accessory"%>">액세사리</a></li>
+				<li><a class="menuLink" href="PostList.jsp?boardCategory=<%="bag"%>">가 방</a></li>
 			</ul>	
 		</div>
 	</div>

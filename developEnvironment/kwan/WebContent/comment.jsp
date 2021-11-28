@@ -10,7 +10,7 @@
 <title></title>
 </head>
 <body>
-<table border="1" width="450">
+<table border="1" width="1080px">
 				<%
 					CommentDTO DTO = new CommentDTO();
 					CommentDAO commentDAO = new CommentDAO();
@@ -29,16 +29,20 @@
 							for(int i =0; i<arr.size();i++){
 								
 								if(session.getAttribute("nickname").equals(arr.get(i).getCommentUser())==true){
+									out.println("<div class=''>");
 									out.println("<tr>"+"<td id='commentUser"+i+"'>"+arr.get(i).getCommentUser()+"</td>");
-									out.println("<td id ='commentContent"+i+"'>"+arr.get(i).getCommentContent()+"</td>");
+									out.println("<td style='width:700px; font-size:23px;' id ='commentContent"+i+"'>"+arr.get(i).getCommentContent()+"</td>");
 									out.println("<td id = 'CommentDate"+i+"'>"+arr.get(i).getCommentDate()+"</td>");
 									out.println("<td><button id='delete"+i+"' onclick='delete_comment("+i+");'>삭제</button></td>");
 									out.println("</tr>");
+									out.println("</div>");
 								}else if(session.getAttribute("nickname").equals(arr.get(i).getCommentUser())==false){
+									out.println("<div class=''>");
 									out.println("<tr>"+"<td>"+arr.get(i).getCommentUser()+"</td>");
 									out.println("<td>"+arr.get(i).getCommentContent()+"</td>");
 									out.println("<td colspan='2'>"+arr.get(i).getCommentDate()+"</td>");
 									out.println("</tr>");
+									out.println("</div>");
 								}
 							}
 						}
