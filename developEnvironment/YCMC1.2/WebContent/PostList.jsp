@@ -7,36 +7,49 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/post.css">
 <title>니옷내옷-당신의 옷을 공유하세요</title>
 </head>
 <body>
 	<div id="container">
 		<header> <%@ include file="header.jsp"%> </header>
 		<main>
-		<table border="1" width="450">
+		<div id = "CategoryPostDiv">
+			<div id ="CategoryPostinsideDiv">
+		<table>
 		<%
 			String queryString = request.getQueryString();
 			String boardCategory = queryString.substring(queryString.lastIndexOf("=")+1);
 			BoardDAO boardDAO = new BoardDAO();
 			BoardDTO categoryPost = null;
 			ArrayList <BoardDTO> categoryList = boardDAO.boardCategoryList(boardCategory);
+			Iterator<BoardDTO> iter = categoryList.iterator();
 			if(categoryList.isEmpty()){
 				out.println("<tr><th>관련 게시글이 아직 없습니다</th></tr>");
 			}else{
-				out.println("<tr>");
-				for(int i =0; i<categoryList.size();i++){
-					out.println("<td>");
-					out.println("<a href='seePost.jsp?id="+categoryList.get(i).getBoardID()+"'>");
-					out.println("<div class='displayPost'>"+"<img src='images/imageboard/"+categoryList.get(i).getBoardID()+"1.jpg'>");
-					out.println("<p>"+categoryList.get(i).getTitle()+"</p>");
-					out.println("</div></a>");
-					out.println("</td>");
-				}
-				out.println("</tr>");
-			}
+			%>
+			<tr>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+			</tr>
+			<tr>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+			</tr>
+			<tr>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+				<td><%if(iter.hasNext()) { categoryPost = iter.next(); %><a href="seePost.jsp?id=<%= categoryPost.getBoardID() %>"><div class="displayPost"><img src="images/imageboard/<%= categoryPost.getBoardID() + "1" %>.jpg"><p><%= categoryPost.getTitle()  %></p></div><% } %></a></td>
+			</tr>
+				
+			<%} %>
 			
-		%>
+		
 		</table>
+		</div>
+		</div>
 		</main>
 		<footer> <%@ include file="footer.jsp"%> </footer>
 	</div>
